@@ -11,7 +11,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.corsi.GestoreCorsiController">
    <center>
-      <TextArea fx:id="txtResult" BorderPane.alignment="CENTER">
+      <TextArea fx:id="txtResult" editable="false" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
          </BorderPane.margin></TextArea>
@@ -25,6 +25,9 @@
                      <padding>
                         <Insets right="10.0" />
                      </padding>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
                   </Label>
                   <TextField fx:id="txtPeriodo">
                      <HBox.margin>
@@ -42,7 +45,29 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
             </HBox>
-            <HBox />
+            <HBox>
+               <children>
+                  <Label text="Corso">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtCorso">
+                     <HBox.margin>
+                        <Insets left="20.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="btnElencoStudenti" mnemonicParsing="false" onAction="#doElencoStudenti" text="Elenco Studenti">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnStatCDS" mnemonicParsing="false" onAction="#doCalcolaStatCds" text="Statistiche CDS">
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children></HBox>
          </children>
       </VBox>
    </top>
